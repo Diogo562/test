@@ -9,8 +9,8 @@ namespace appW.Controllers
 {
     public class EmpregadoController : Controller
     {
-        testarEntities cobj = new testarEntities();
-        // GET: Empregado
+        testarEntities cobj = new testarEntities(); // GET: Empregado
+        
         public ActionResult AddEmpregado()
         {
             EmpregadoModel obj = new EmpregadoModel();
