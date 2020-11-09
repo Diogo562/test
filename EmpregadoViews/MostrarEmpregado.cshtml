@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Mostrar Empregados";
+}
+
+@model List<empregadoT>
+<h2>MostrarEmpregado</h2>
+
+<table class="table table-striped table-dark">
+
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Departamento</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.empregadoID</td>
+            <td>@item.nome</td>
+            <td>@item.departamento</td>
+            <td>@Html.ActionLink("Editar", "EditarEmpregado", "Empregado", new { empregadoid = item.empregadoID }, new { })</td>
+            <td>@Html.ActionLink("Eliminar", "EliminarEmpregado", "Empregado", new { empregadoid = item.empregadoID }, new { })</td>
+            <td></td>
+        </tr>
+    }
+
+</table>
+
+<button class="alert-info">@Html.ActionLink("Add", "AddEmpregado", "Empregado")</button>

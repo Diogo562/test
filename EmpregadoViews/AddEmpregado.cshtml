@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AddEmpregado";
+}
+
+@model appW.Models.EmpregadoModel
+
+<h2>Add Empregado</h2>
+
+<form action="AddEmpregado/Empregado" method="post">
+
+    Nome Empregado:  @Html.TextBoxFor(model => model.nome)
+    Departamento:  @Html.TextBoxFor(model => model.departamento)
+    <input type="submit" value="Add Empregado"/>
+</form>
+<button class="btn-link">@Html.ActionLink("Voltar", "MostrarEmpregado", "Empregado")</button>
